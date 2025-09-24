@@ -1,4 +1,4 @@
-# Boilerplate Node.js + Express + Typescript + PostgreSQL
+# Boilerplate Node.js + Express + Typescript
 
 Starting boilerplate for Node.js server.
 
@@ -6,8 +6,8 @@ Starting boilerplate for Node.js server.
 
 - Node.js + Express
 - TypeScript
-- PostgreSQL
-- Prisma ORM
+- MongoDB
+- Mongoose ODM
 - Prettier
 - ESLint
 - ts-node-dev - for develop
@@ -19,11 +19,6 @@ Starting boilerplate for Node.js server.
   npm run build
   npm run start
   npm run typecheck
-  npm run migrate
-  npm run migrate:dev
-  npm run migrate:deploy
-  npm run migrate:reset
-  npm run db:generate
   npm run lint
   npm run lint:fix
 ```
@@ -34,11 +29,8 @@ Starting boilerplate for Node.js server.
 /
 ├─ 📂 dist/
 │ └─ ...
-├─ 📂 prisma/
-│ └─ 📄 schema.prisma
 ├─ 📂 src/
 │ ├─ 📂 config/
-│ │ └─ 📄 db.ts
 │ ├─ 📄 app.ts
 │ ├─ 📄 router.ts
 │ └─ 📄 server.ts # entry point
@@ -69,7 +61,7 @@ npm install
 **2.** Create basic `.env` file:
 
 ```env
-DATABASE_URL="postgresql://user:password@host:port/db_name?schema=public"
+DATABASE_URL="mongodb+srv://<db_user>:<db_password>@<cluster>.ush1nq9.mongodb.net/?retryWrites=true&w=majority&appName=<cluster>"
 PORT=4000
 ```
 

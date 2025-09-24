@@ -8,10 +8,6 @@
     "build": "npm run typecheck && tsc && tsc-alias",
     "start": "cross-env NODE_ENV=production node dist/server.js",
     "typecheck": "tsc --noEmit",
-    "migrate": "npx prisma migrate",
-    "migrate:dev": "npx prisma migrate dev",
-    "migrate:prod": "npx prisma migrate dev",
-    "db:generate": "npx prisma generate",
     "lint": "eslint . --ext .ts",
     "lint:fix": "npm run lint --fix"
   },
@@ -27,9 +23,10 @@
   },
   "homepage": "https://github.com/lazenyuk-dmitry/todo_list_api_express#readme",
   "dependencies": {
-    "@prisma/client": "^6.16.2",
     "cross-env": "^10.0.0",
+    "dotenv": "^17.2.2",
     "express": "^5.1.0",
+    "mongoose": "^8.18.2",
     "tsc-alias": "^1.8.16"
   },
   "devDependencies": {
@@ -44,7 +41,6 @@
     "globals": "^16.4.0",
     "jiti": "^2.5.1",
     "prettier": "^3.6.2",
-    "prisma": "^6.16.2",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.2",
