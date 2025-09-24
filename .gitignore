@@ -1,0 +1,47 @@
+# Node.js
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# Dist TS
+dist/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.*
+
+# Prisma
+.prisma
+generated/prisma
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Testing / Coverage
+coverage/
+.nyc_output/
+
+# Optional caches
+.cache/
+.tmp/
