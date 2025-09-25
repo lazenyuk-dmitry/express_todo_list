@@ -6,6 +6,9 @@ import prettier from 'eslint-plugin-prettier';
 export default [
   js.configs.recommended,
   {
+    ignores: ['dist/**', 'node_modules/**'], // ← это вместо .eslintignore
+  },
+  {
     files: ['**/*.ts'],
     languageOptions: {
       parser: tsParser,
@@ -21,13 +24,14 @@ export default [
       '@typescript-eslint': ts,
       prettier: prettier,
     },
-    overrides: [
-      {
-        files: ["*.d.ts"],
-        rules: {
-          "@typescript-eslint/no-unused-vars": "off"
-        }
-      }
-    ]
+    rules: {
+      quotes: ['error', 'single', { 'avoidEscape': true }]
+    }
   },
+  {
+    files: ['**/*.d.ts'],
+    rules: {
+      'no-unused-vars': 'off',
+    },
+  }
 ];

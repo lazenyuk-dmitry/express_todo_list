@@ -1,11 +1,11 @@
-import app from "@/app";
+import app from '@/app';
 import mongoose from 'mongoose';
 
 const PORT = process.env.PORT || 4000;
 const DATABASE_URL = process.env.DATABASE_URL;
 
-app.get("/", (req, res) => {
-  res.json({ message: "API service is running 🚀" });
+app.get('/', (req, res) => {
+  res.json({ message: 'API service is running 🚀' });
 });
 
 // Start server
