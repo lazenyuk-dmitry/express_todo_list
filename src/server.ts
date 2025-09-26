@@ -1,4 +1,5 @@
 import app from '@/app';
+import './config/db';
 import mongoose from 'mongoose';
 
 const PORT = process.env.PORT || 4000;
@@ -21,13 +22,13 @@ app.get('/', (req, res) => {
     console.error('❌ Database connection failed:', error);
     process.exit(1);
   }
-})()
+})();
 
 const onExit = async (signal: NodeJS.Signals) => {
   await mongoose.disconnect();
   console.log(`🔌 Disconnected (${signal})`);
   process.exit(0);
-}
+};
 
 process.once('SIGINT', onExit);
 process.once('SIGTERM', onExit);

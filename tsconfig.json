@@ -15,7 +15,7 @@
     },
 
     "types": ["node"],
-    "typeRoots": ["./types", "./src/types", "./node_modules/@types"],
+    "typeRoots": ["./types", "./src/types", "./node_modules/@types"]
   },
 
   "include": ["src", "types"],
